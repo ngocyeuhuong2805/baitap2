@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/svg.dart';
@@ -24,7 +25,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
   final cartProvider = Get.put(CartController());
   @override
   void initState() {
-    // TODO: implement initState
+    super.initState();
 
   }
   @override
@@ -52,7 +53,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                     Duration(milliseconds: 200),
                     curve: Curves.easeInCubic,
                   ),
-                  showBadge: cartProvider.listProductCard!.isNotEmpty,
+                  showBadge: cartProvider.listProductCard.isNotEmpty,
                   badgeStyle: const badges.BadgeStyle(
                     badgeColor: Colors.red,
                   ),
@@ -66,7 +67,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                     'asset/icons/shopping_cart1.svg',
                     height: 24,
                     width: 24,
-                    color: Colors.black,
+                    colorFilter: const ColorFilter.mode(Colors.black, BlendMode.srcIn),
                   ),
                 ),
               ),
@@ -99,7 +100,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                 ),
               ),
               const SizedBox(height: 10,),
-              Text(widget.productModel.name.toString() ?? '', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 20,), overflow: TextOverflow.ellipsis, maxLines: 2,),
+              Text(widget.productModel.name.toString(), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 20,), overflow: TextOverflow.ellipsis, maxLines: 2,),
               const SizedBox(height: 10,),
               Row(
                 children: [
@@ -116,7 +117,9 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                     ),
                     onRatingUpdate: (rating) {
 
-                      print(rating);
+                      if (kDebugMode) {
+                        print(rating);
+                      }
                     },
                   ),
                   const SizedBox(width: 5),

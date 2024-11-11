@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:learn_getx/routes/app_router.dart';
+import 'package:learn_getx/routes/router_utils.dart';
 import 'package:learn_getx/untils/untils.dart';
-import 'package:learn_getx/view/bottom_navigation_bar/main_screen.dart';
+
 
 void main() async {
   await registerServices();
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         textTheme: GoogleFonts.quicksandTextTheme(),
       ),
-
+     getPages: AppPage.routes,
      home: const AppRouter(),
     );
   }

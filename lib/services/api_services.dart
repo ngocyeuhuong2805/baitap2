@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
 
-import '../const.dart';
 
 class HTTPService {
   final Dio _dio = Dio();
@@ -11,10 +10,8 @@ class HTTPService {
 
   void _configureDio() {
     _dio.options = BaseOptions(
-      baseUrl: "https://api.cryptorank.io/v1/",
-      queryParameters: {
-        "api_key": CRYPTO_RANK_API_KEY,
-      },
+      baseUrl: "",
+
     );
   }
 

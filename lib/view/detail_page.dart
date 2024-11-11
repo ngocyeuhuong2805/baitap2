@@ -11,10 +11,10 @@ class DetailPage extends StatefulWidget {
   final UserModel userModel;
 
   @override
-  _DetailPageState createState() => _DetailPageState();
+  DetailPageState createState() => DetailPageState();
 }
 
-class _DetailPageState extends State<DetailPage> {
+class DetailPageState extends State<DetailPage> {
 
   List<Color> colorList = [Colors.black, Colors.white, Colors.cyan];
 

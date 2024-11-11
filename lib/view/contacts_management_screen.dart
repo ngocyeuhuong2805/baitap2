@@ -16,7 +16,7 @@ class _ContactsManagementScreenState extends State<ContactsManagementScreen> {
   ContactController contactController = Get.find();
   @override
   void initState() {
-    // TODO: implement initState
+    super.initState();
 
   }
 

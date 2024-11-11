@@ -60,7 +60,7 @@ class _ItemCartWidgetState extends State<ItemCartWidget> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(widget.productModel.name ?? '', style: kContentStyle),
+                    Text(widget.productModel.name, style: kContentStyle),
                     Text('Price: ${formatVND(totalPrice.toInt())}', style: kContentStyle,), // Update price displayed
                     Text('Đã bán : ${widget.productModel.quantity}', style: kContentStyle),
                   ],

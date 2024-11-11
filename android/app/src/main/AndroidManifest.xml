@@ -11,7 +11,7 @@
     </queries>
 
     <application
-        android:label="learn_getx"
+        android:label="Learn GetX"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
 

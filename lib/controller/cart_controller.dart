@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:get/get.dart';
 import 'package:learn_getx/models/product_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -15,7 +14,6 @@ class CartController extends GetxController {
   }
   void addProductToCart(ProductModel product, String quantityToCard){
     listProductCard.add(ProductModel(id: product.id, name: product.name, price: product.price, imgUrl: product.imgUrl, quantity: product.quantity, quantityToCard: quantityToCard));
-    print('listProductCard : ${listProductCard}');
     saveProductListCardStorage();
   }
   void deleteProductToCart (int index) async {
@@ -41,7 +39,6 @@ class CartController extends GetxController {
     for(ProductModel product in listProductCardChoose){
       total += int.parse(product.price) * int.parse(product.quantityToCard);
     }
-    print('totalPrice : ${total.toInt()}');
     return total.toInt();
   }
   void updateProductToCart(String productId, int newQuantity) {

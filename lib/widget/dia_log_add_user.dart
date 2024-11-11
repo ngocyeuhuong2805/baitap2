@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'package:learn_getx/controller/user_controller.dart';
-
 import '../untils/constant.dart';
 
 class DiaLogAddUser extends StatefulWidget {

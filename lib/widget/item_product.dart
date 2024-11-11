@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_getx/untils/constant.dart';
-
 import '../models/product_model.dart';
-import '../view/detail_product_screen.dart';
+import 'package:get/get.dart';
 
 class ItemProduct extends StatelessWidget {
   const ItemProduct({
@@ -16,7 +15,7 @@ class ItemProduct extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailProductScreen(productModel: productModel)));
+        Get.toNamed('/detailProduct', arguments: productModel);
       },
       child: Container(
         decoration: BoxDecoration(

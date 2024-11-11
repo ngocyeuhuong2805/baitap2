@@ -30,6 +30,7 @@ class _AppRouterState extends State<AppRouter> {
     return Scaffold(
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.blue,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: const [

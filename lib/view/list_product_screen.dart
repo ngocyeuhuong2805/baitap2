@@ -19,7 +19,7 @@ class _ListProductScreenState extends State<ListProductScreen> {
   final cartProvider = Get.put(CartController());
   @override
   void initState() {
-    // TODO: implement initState
+    super.initState();
     userController.productList;
   }
   @override
@@ -47,7 +47,7 @@ class _ListProductScreenState extends State<ListProductScreen> {
                     Duration(milliseconds: 200),
                     curve: Curves.easeInCubic,
                   ),
-                  showBadge: cartProvider.listProductCard!.isNotEmpty,
+                  showBadge: cartProvider.listProductCard.isNotEmpty,
                   badgeStyle: const badges.BadgeStyle(
                     badgeColor: Colors.red,
                   ),

@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
@@ -30,7 +31,9 @@ class _BottomSheetAddContactState extends State<BottomSheetAddContact> {
         });
       }
     } catch (e) {
-      print('Error picking image: $e');
+      if (kDebugMode) {
+        print('Error picking image: $e');
+      }
     }
   }
   @override
@@ -70,7 +73,7 @@ class _BottomSheetAddContactState extends State<BottomSheetAddContact> {
                     String uniqueId = DateTime.now().millisecondsSinceEpoch.toString();
                     String imagePath = imageFile?.path ?? '';
 
-                    controller.addContact(uniqueId, name.text ?? '', imagePath, phone.text, addrees.text,);
+                    controller.addContact(uniqueId, name.text, imagePath, phone.text, addrees.text,);
                     Get.back();
 
                   },
