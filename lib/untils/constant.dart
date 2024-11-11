@@ -9,6 +9,7 @@ const TextStyle kContentStyle = TextStyle(
   color: Colors.black,
   fontWeight: FontWeight.w600,
   fontSize: 14,
+  overflow: TextOverflow.ellipsis,
 );
 const TextStyle kContent2Style = TextStyle(fontSize: 16, fontWeight: FontWeight.w600);
 const TextStyle kContent3Style = TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600);
@@ -51,6 +52,12 @@ const String QUANTITY = 'Quantity';
 const String IMAGE_URL = 'https://noithatbinhminh.com.vn/wp-content/uploads/2022/08/anh-dep-44.jpg.webp';
 const String IMAGE_URL2 = 'https://noithatbinhminh.com.vn/wp-content/uploads/2022/08/anh-dep-44.jpg.webp';
 const String DETAIL_PRODUCT = 'Detail Product';
+const String TITLE_HOME = 'Nhập Form, CheckBox,\nRadioButton, Switch';
+const String FINISH = 'Đã hoàn thành';
+const String UNFINISH = 'Chưa hoàn thành';
+const String LISTEN = 'Nghe nhạc';
+const String MOVIE = 'Xem phim';
+
 
 String formatVND(int amount) {
   String result;

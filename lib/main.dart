@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:learn_getx/routes/app_router.dart';
 import 'package:learn_getx/untils/untils.dart';
-import 'package:learn_getx/view/home_screen.dart';
-import 'package:learn_getx/view/main_screen.dart';
+import 'package:learn_getx/view/bottom_navigation_bar/main_screen.dart';
 
 void main() async {
   await registerServices();
@@ -21,15 +21,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
         textTheme: GoogleFonts.quicksandTextTheme(),
       ),
-      routes: {
-        "/main" : (context) =>  const MainScreen(),
-    },
-      initialRoute: "/main",
+
+     home: const AppRouter(),
     );
   }
 }
